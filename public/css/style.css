@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+    --border-white: 1px solid #ffffff;
+}
+
+body {
+    font-family: var(--font-poppins);
+    text-align: center;
+    color: #ffffff;
+}
+
+.body-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/laptop-coloured.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    position: relative;
+}
+
+.body-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 9, 41, 0.4875);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo {
+    width: 165px;
+    margin-top: 20%;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20%;
+}
+
+p {
+    font-size: 12px;
+    margin-top: 10%;
+    line-height: 1.8em;
+}
+
+.countdown {
+    margin-top: 20%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.countdown-item {
+    border: var(--border-white);
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+}
+
+.countdown-value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.countdown-unit {
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.contact {
+    margin-top: 20%;
+    display: flex;
+    justify-content: space-around;
+    border: var(--border-white);
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-icon-set {
+    height: 24px;
+    width: 24px;
+    border: var(--border-white);
+    border-radius: 50%;
+    font-size: 14px;
+    margin: auto;
+}
+
+.contact-value {
+    font-size: 11px;
+}
+
+
+/* NON-MOBILE VIEWS */
+@media (min-width: 576px) {
+    .logo {
+        margin-top: 50px;
+    }
+
+    h1 {
+        margin-top: 70px;
+        font-size: 38px;
+    }
+
+    p {
+        margin-top: 35px;
+        font-size: 16px;
+        padding: 0 20%;
+    }
+
+    .countdown {
+        margin-top: 40px;
+        width: 50%;
+    }
+    
+    .countdown-item {
+        border-radius: 6px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .countdown-value {
+        font-size: 30px;
+    }
+    
+    .countdown-unit {
+        font-size: 12px;
+    }
+
+    .contact {
+        margin-top: 35px;
+        width: 50%;
+    }
+    
+    .contact-icon-set {
+        height: 30px;
+        width: 30px;
+        font-size: 18px;   
+    }
+    
+    .contact-value {
+        font-size: 16px;
+    }
+}
