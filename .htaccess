@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^cipherportlab.site$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^cipherportlab.site$
+# RewriteCond %{HTTP_HOST} ^cipherportlab.site$ [NC,OR]
+# RewriteCond %{HTTP_HOST} ^cipherportlab.site$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
