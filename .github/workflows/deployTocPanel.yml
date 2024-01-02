@@ -1,13 +1,16 @@
 name: Deploy Updates to CPanel
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - prod
       - dev
 
 jobs:
-  web-deploy:
+  if_merged:
     name: Deploy to website
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
