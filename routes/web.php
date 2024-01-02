@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'comingSoon']);
+Route::middleware('log.visit')->group(function() {
+    Route::get('/', [PageController::class, 'comingSoon']);
+    Route::get('/test', [PageController::class, 'test']);
+    Route::get('/page2', [PageController::class, 'test']);
+});

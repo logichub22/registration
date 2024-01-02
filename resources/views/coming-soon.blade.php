@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>
-            {{ env('APP_ENV') != 'prod' ? '[DEV]' : '' }}
+            {{ config('app.env') != 'prod' ? '[DEV]' : '' }}
             Cipherport Creative Centre :: Coming Soon
         </title>
 
@@ -29,7 +29,7 @@
     <body>
         <div class="body-wrapper">
             <div class="body-overlay">
-                <img class="logo" src="{{ asset('images/cipherport-logo-white.png') }}" alt="Cipherport">
+                <a href="{{ config('app.url') }}"><img class="logo" src="{{ asset('images/cipherport-logo-white.png') }}" alt="Cipherport"></a>
 
                 <h1>The Tech solution for you<br>coming soon</h1>
 
